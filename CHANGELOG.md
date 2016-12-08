@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 ### Fixed
 * ObjectIDs are properly assigned
+* Removed duplicate code from index.js
 
 ## [1.0.0] - 2016-12-07
 * Initial Release
