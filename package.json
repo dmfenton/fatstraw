@@ -20,7 +20,7 @@
     "tape": "^4.6.3"
   },
   "scripts": {
-    "test": "standard src && tape test test/**/*.js | tap-sepc"
+    "test": "standard && tape test/**/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
