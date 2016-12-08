@@ -7,7 +7,7 @@ or
 
 ## Usage
 ```sh
-fatstraw [options]
+fatstraw <cmd> [options]
 
 Options:
   -f, --file      The CSV to load into the BDS                        [required]
@@ -25,7 +25,7 @@ Options:
   --help          Show help                                            [boolean]
 
 Examples:
-  fatstraw -h user:pass@bds:9220 -f
+  fatstraw slurp -h user:pass@bds:9220 -f
   data.csv -s parking_violations -g Shape
   -x X -y Y
 
