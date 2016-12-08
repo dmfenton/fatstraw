@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict'
 const _ = require('highland')
 const fs = require('fs')
@@ -54,7 +53,8 @@ client.indices.getMapping({index: service, type: service})
       first = false
       return
     }
-    return transform.toJSON(feature, schema, fieldNames)
+    objectid++
+    return transform.toJSON(feature, schema, fieldNames, objectid)
   }) // convert each row to JSON docs
   .compact()
   .pipe(skipper(argv.skip)) // skip features from the start of the soruce
