@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+### Added
+* Function to generate Geoevent definition from Socrata view
+
 ### Fixed
 * ObjectIDs are properly assigned
 * Removed duplicate code from index.js

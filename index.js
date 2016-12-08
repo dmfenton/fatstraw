@@ -6,20 +6,20 @@ const Elasticsearch = require('elasticsearch')
 const transform = require('./lib/transform')
 
 // Set up CLI Arguments
-const argv = require('./lib/cmd')
+const cmd = require('./lib/cmd')
 
-const rate = argv.rate
-const batch = argv.batch
-const service = argv.service
-const host = argv.host
-const file = argv.file
+const rate = cmd.rate
+const batch = cmd.batch
+const service = cmd.service
+const host = cmd.host
+const file = cmd.file
 
-const client = new Elasticsearch.Client({host, apiVersion: '2.3', sniffOnStart: argv['sniff']})
+const client = new Elasticsearch.Client({host, apiVersion: '2.3', sniffOnStart: cmd['sniff']})
 const errorLog = fs.createWriteStream('slurp.error.log')
 
 let action
 let schema
-let objectid = argv['id-start'] || 0
+let objectid = cmd['id-start'] || 0
 let completed = 0
 let pending
 let start = Date.now()
@@ -51,10 +51,10 @@ client.indices.getMapping({index: service, type: service})
       return
     }
     objectid++
-    return transform.toJSON(feature, schema, fieldNames, objectid)
+    return transform.toJSON(feature, schema, fieldNames, objectid, cmd)
   }) // convert each row to JSON docs
   .compact()
-  .pipe(skipper(argv.skip)) // skip features from the start of the soruce
+  .pipe(skipper(cmd.skip)) // skip features from the start of the soruce
   .ratelimit(rate, 1) // limit the features per second
   .batch(batch) // limit the features per bulk upload
   .map((batch) => { // prepare the batch payload for Elasticsearch
@@ -65,7 +65,7 @@ client.indices.getMapping({index: service, type: service})
     return payload
   })
   .flatMap((payload) => { // send the requests off to ES
-    if (argv['dry-run']) console.log(payload) && process.exit(0)
+    if (cmd['dry-run']) console.log(payload) && process.exit(0)
     else return _(client.bulk({body: payload}))
   })
   .errors((e) => errorLog.write(e.stack)) // log any HTTP failures

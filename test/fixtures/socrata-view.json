@@ -1,0 +1,426 @@
+{
+  "id" : "wrvz-psew",
+  "name" : "Taxi Trips",
+  "attribution" : "City of Chicago",
+  "attributionLink" : "https://www.cityofchicago.org",
+  "averageRating" : 0,
+  "category" : "Transportation",
+  "createdAt" : 1464384468,
+  "description" : "Taxi trips reported to the City of Chicago in its role as a regulatory agency.  To protect privacy but allow for aggregate analyses, the Taxi ID is consistent for any given taxi medallion number but does not show the number, Census Tracts are suppressed in some cases, and times are rounded to the nearest 15 minutes.\r\n\r\nDue to the data reporting process, not all trips are reported but the City believes that most are.\r\n\r\nSee http://digital.cityofchicago.org/index.php/chicago-taxi-data-released for more information about this dataset and how it was created.",
+  "displayType" : "table",
+  "downloadCount" : 94,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1479325270,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 24880892,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1479145203,
+  "publicationGroup" : 10978534,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowIdentifierColumnId" : 277282874,
+  "rowsUpdatedAt" : 1464384468,
+  "tableId" : 13899837,
+  "totalTimesRated" : 0,
+  "viewCount" : 1228,
+  "viewLastModified" : 1479325257,
+  "viewType" : "tabular",
+  "columns" : [ {
+    "id" : 277282874,
+    "name" : "Trip ID",
+    "dataTypeName" : "text",
+    "description" : "A unique identifier for the trip.",
+    "fieldName" : "trip_id",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 37178642,
+    "width" : 115,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left",
+      "aggregate" : "count"
+    }
+  }, {
+    "id" : 277282875,
+    "name" : "Taxi ID",
+    "dataTypeName" : "text",
+    "description" : "A unique identifier for the taxi.",
+    "fieldName" : "taxi_id",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36436895,
+    "width" : 116,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282876,
+    "name" : "Trip Start Timestamp",
+    "dataTypeName" : "calendar_date",
+    "description" : "When the trip started, rounded to the nearest 15 minutes.",
+    "fieldName" : "trip_start_timestamp",
+    "position" : 3,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 36436896,
+    "width" : 188,
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282877,
+    "name" : "Trip End Timestamp",
+    "dataTypeName" : "calendar_date",
+    "description" : "When the trip ended, rounded to the nearest 15 minutes.",
+    "fieldName" : "trip_end_timestamp",
+    "position" : 4,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 36436897,
+    "width" : 173,
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282878,
+    "name" : "Trip Seconds",
+    "dataTypeName" : "number",
+    "description" : "Time of the trip in seconds.",
+    "fieldName" : "trip_seconds",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36436898,
+    "width" : 132,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282879,
+    "name" : "Trip Miles",
+    "dataTypeName" : "number",
+    "description" : "Distance of the trip in miles.",
+    "fieldName" : "trip_miles",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36436899,
+    "width" : 124,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282880,
+    "name" : "Pickup Census Tract",
+    "dataTypeName" : "text",
+    "description" : "The Census Tract where the trip began.  For privacy, this Census Tract is not shown for some trips.\n",
+    "fieldName" : "pickup_census_tract",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 37433652,
+    "width" : 182,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282881,
+    "name" : "Dropoff Census Tract",
+    "dataTypeName" : "text",
+    "description" : "The Census Tract where the trip ended.  For privacy, this Census Tract is not shown for some trips.\n",
+    "fieldName" : "dropoff_census_tract",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 37433680,
+    "width" : 182,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282882,
+    "name" : "Pickup Community Area",
+    "dataTypeName" : "number",
+    "description" : "The Community Area where the trip began.\n",
+    "fieldName" : "pickup_community_area",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 38841242,
+    "width" : 200,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "precision" : "0",
+      "align" : "right"
+    }
+  }, {
+    "id" : 277282883,
+    "name" : "Dropoff Community Area",
+    "dataTypeName" : "number",
+    "description" : "The Community Area where the trip ended.\n",
+    "fieldName" : "dropoff_community_area",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 38841254,
+    "width" : 194,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "precision" : "0",
+      "align" : "right"
+    }
+  }, {
+    "id" : 277282884,
+    "name" : "Fare",
+    "dataTypeName" : "money",
+    "description" : "The fare for the trip.",
+    "fieldName" : "fare",
+    "position" : 11,
+    "renderTypeName" : "money",
+    "tableColumnId" : 36436902,
+    "width" : 116,
+    "format" : {
+      "humane" : "false",
+      "currency" : "USD",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282885,
+    "name" : "Tips",
+    "dataTypeName" : "money",
+    "description" : "The tip for the trip. Cash tips generally will not be recorded.",
+    "fieldName" : "tips",
+    "position" : 12,
+    "renderTypeName" : "money",
+    "tableColumnId" : 36436903,
+    "width" : 116,
+    "format" : {
+      "humane" : "false",
+      "currency" : "USD",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282886,
+    "name" : "Tolls",
+    "dataTypeName" : "money",
+    "description" : "The tolls for the trip.",
+    "fieldName" : "tolls",
+    "position" : 13,
+    "renderTypeName" : "money",
+    "tableColumnId" : 36436904,
+    "width" : 115,
+    "format" : {
+      "humane" : "false",
+      "currency" : "USD",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282887,
+    "name" : "Extras",
+    "dataTypeName" : "money",
+    "description" : "Extra charges for the trip.",
+    "fieldName" : "extras",
+    "position" : 14,
+    "renderTypeName" : "money",
+    "tableColumnId" : 36436905,
+    "width" : 132,
+    "format" : {
+      "humane" : "false",
+      "currency" : "USD",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282889,
+    "name" : "Trip Total",
+    "dataTypeName" : "money",
+    "description" : "Total cost of the trip, the total of the previous columns.",
+    "fieldName" : "trip_total",
+    "position" : 16,
+    "renderTypeName" : "money",
+    "tableColumnId" : 36436907,
+    "width" : 127,
+    "format" : {
+      "humane" : "false",
+      "currency" : "USD",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 277282890,
+    "name" : "Payment Type",
+    "dataTypeName" : "text",
+    "description" : "Type of payment for the trip.",
+    "fieldName" : "payment_type",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36436908,
+    "width" : 152,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282891,
+    "name" : "Company",
+    "dataTypeName" : "text",
+    "description" : "The taxi company.",
+    "fieldName" : "company",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36436909,
+    "width" : 271,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282892,
+    "name" : "Pickup Centroid Latitude",
+    "dataTypeName" : "number",
+    "description" : "The latitude of the center of the pickup census tract or the community area if the census tract has been hidden for privacy.",
+    "fieldName" : "pickup_centroid_latitude",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 37162766,
+    "width" : 208,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 277282893,
+    "name" : "Pickup Centroid Longitude",
+    "dataTypeName" : "number",
+    "description" : "The longitude of the center of the pickup census tract or the community area if the census tract has been hidden for privacy.",
+    "fieldName" : "pickup_centroid_longitude",
+    "position" : 20,
+    "renderTypeName" : "number",
+    "tableColumnId" : 37162798,
+    "width" : 214,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 277282894,
+    "name" : "Pickup Centroid Location",
+    "dataTypeName" : "point",
+    "description" : "The location of the center of the pickup census tract or the community area if the census tract has been hidden for privacy.",
+    "fieldName" : "pickup_centroid_location",
+    "position" : 21,
+    "renderTypeName" : "point",
+    "tableColumnId" : 37162799,
+    "width" : 210,
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282895,
+    "name" : "Dropoff Centroid Latitude",
+    "dataTypeName" : "number",
+    "description" : "The latitude of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy.",
+    "fieldName" : "dropoff_centroid_latitude",
+    "position" : 22,
+    "renderTypeName" : "number",
+    "tableColumnId" : 37162800,
+    "width" : 208,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 277282896,
+    "name" : "Dropoff Centroid Longitude",
+    "dataTypeName" : "number",
+    "description" : "The longitude of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy.",
+    "fieldName" : "dropoff_centroid_longitude",
+    "position" : 23,
+    "renderTypeName" : "number",
+    "tableColumnId" : 37162801,
+    "width" : 217,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 277282897,
+    "name" : "Dropoff Centroid  Location",
+    "dataTypeName" : "point",
+    "description" : "The location of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy.",
+    "fieldName" : "dropoff_centroid_location",
+    "position" : 24,
+    "renderTypeName" : "point",
+    "tableColumnId" : 37162802,
+    "width" : 210,
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 277282898,
+    "name" : "Community Areas",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_vrxf_vc4k",
+    "position" : 25,
+    "renderTypeName" : "number",
+    "tableColumnId" : 38895134,
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "custom_fields" : {
+      "Metadata" : {
+        "Time Period" : "2013-current",
+        "Frequency" : "Data are updated monthly",
+        "Data Owner" : "Department of Business Affairs & Consumer Protection"
+      }
+    },
+    "rowIdentifier" : 277282874,
+    "rowLabel" : "Trip",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "vewm-vupz",
+    "displayName" : "Jonathan Levy",
+    "roleName" : "administrator",
+    "screenName" : "Jonathan Levy",
+    "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards", "manage_provenance", "create_story", "edit_story_title_desc", "create_story_copy", "delete_story", "manage_story_collaborators", "manage_story_visibility", "manage_story_public_version", "edit_story", "view_unpublished_story", "view_story", "view_all_dataset_status_logs", "use_data_connectors" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "vewm-vupz",
+    "displayName" : "Jonathan Levy",
+    "roleName" : "administrator",
+    "screenName" : "Jonathan Levy",
+    "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards", "manage_provenance", "create_story", "edit_story_title_desc", "create_story_copy", "delete_story", "manage_story_collaborators", "manage_story_visibility", "manage_story_public_version", "edit_story", "view_unpublished_story", "view_story", "view_all_dataset_status_logs", "use_data_connectors" ]
+  },
+  "tags" : [ "taxis", "transportation" ],
+  "flags" : [ "default", "restorable", "restorePossibleForType" ]
+}
