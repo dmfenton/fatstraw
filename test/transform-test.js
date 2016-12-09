@@ -18,3 +18,13 @@ test('Transform a line from a csv into json', t => {
   t.deepEqual(JSON.stringify(json), JSON.stringify(expected), 'transformed correctly')
   t.end()
 })
+
+test('Transposition bug', t => {
+  const configuration = require('./fixtures/sample-config.json')
+  const csv = fs.readFileSync(`${__dirname}/fixtures/sample.csv`).toString()
+  const csvArray = csv.split('\n')
+  const feature = csvArray[10]
+  const json = transform.toJSON(feature, 0, configuration)
+  t.equal(json.latitude_longitude, '34.25291,-118.40727', 'fields are not transposed')
+  t.end()
+})

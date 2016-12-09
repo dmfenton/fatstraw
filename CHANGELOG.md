@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 * ObjectIDs are properly assigned
 * Removed duplicate code from index.js
+* Bug where csv rows could be parsed incorrectly into values
 
 ## [1.0.0] - 2016-12-07
 * Initial Release

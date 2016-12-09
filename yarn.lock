@@ -222,6 +222,10 @@ cryptiles@2.x.x:
   dependencies:
     boom "2.x.x"
 
+csv-parse@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.1.7.tgz#6e4678f7967013ac823929a4303a3ce177115abc"
+
 d@^0.1.1, d@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/d/-/d-0.1.1.tgz#da184c535d18d8ee7ba2aa229b914009fae11309"
