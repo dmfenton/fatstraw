@@ -84,6 +84,7 @@ function handler (cmd) {
     let fieldNames
     getFile(file)
     .split() // split the CSV by line
+    .compact()
     .map((feature) => {
       if (first) {
         fieldNames = feature.split(',').map(h => { return h.trim().replace(/\s+/g, '_') })

@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+### Fixed
+* Ensure blank lines are skipped
+
 ## [1.1.0] - 2016-12-09
 ### Added
 * command `prepare` to prepare a definition and data source
