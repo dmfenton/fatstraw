@@ -13,7 +13,7 @@ function builder (yargs) {
   return yargs
     .describe('d', 'The source dataset')
     .alias('d', 'dataset')
-    .desribe('t', 'An authorization token')
+    .describe('t', 'An authorization token')
     .alias('t', 'token')
     .describe('u', 'GeoEvent User')
     .alias('u', 'user')
@@ -41,12 +41,15 @@ function handler (cmd) {
       guid: definition.guid,
       dataSourceLayerName: definition.name,
       timeUnits: cmd.timeUnits,
-      timeInterval: cmd.timeInterval
+      timeInterval: cmd.timeInterval,
+      displayField: definition.fieldDefinitions[0].name
     }
     const dataSource = createDataSource(dsOptions)
+    console.log(JSON.stringify(dataSource, null, 2))
     return publishDataSource(dataSource, cmd)
   }, handleRejection)
   .then(res => {
+    if (res.results[0].status === 'error') throw new Error(res.results[0].messages[0])
     console.log(`status=success method=post object=datasource`)
     if (res.statusCode >= 400) throw new Error(res.statusCode)
     const configuration = createConfiguration.fromSocrata(view)
@@ -54,6 +57,7 @@ function handler (cmd) {
     fs.writeFileSync(fileName, JSON.stringify(configuration))
     console.log(`status=success output=${fileName}`)
   }, handleRejection)
+  .catch(handleRejection)
 }
 
 function handleRejection (rejection) {
