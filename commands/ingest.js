@@ -88,8 +88,9 @@ function handler (cmd) {
       if (first) {
         fieldNames = feature.split(',').map(h => { return h.trim().replace(/\s+/g, '_') })
         if (!configuration) configuration = createConfiguration.fromCSV(fieldNames, schema, cmd)
+        first = false
+        return
       }
-      first = false
       objectid++
       return transform.toJSON(feature, objectid, configuration)
     }) // convert each row to JSON docs
