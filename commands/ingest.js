@@ -4,6 +4,7 @@ const fs = require('fs')
 const request = require('request').defaults({gzip: true})
 const Elasticsearch = require('elasticsearch')
 const transform = require('../lib/transform')
+const createConfiguration = require('../lib/create-configuration')
 
 function getFile (file) {
   let stream
@@ -83,13 +84,14 @@ function handler (cmd) {
     getFile(file)
     .split() // split the CSV by line
     .map((feature) => {
+      let configuration
       if (first) {
         fieldNames = feature.split(',').map(h => { return h.trim().replace(/\s+/g, '_') })
-        first = false
-        return
+        configuration = getConfig(fieldNames, schema, cmd)
       }
+      first = false
       objectid++
-      return transform.toJSON(feature, schema, fieldNames, objectid, cmd)
+      return transform.toJSON(feature, objectid, configuration)
     }) // convert each row to JSON docs
     .compact()
     .pipe(skipper(cmd.skip)) // skip features from the start of the soruce
@@ -129,6 +131,18 @@ function handler (cmd) {
   .catch(e => {
     errorLog.write.error(e.stack)
   })
+}
+
+function getConfig (fieldNames, schema, cmd) {
+  if (cmd.configuration) {
+    return JSON.parse(fs.readFileSync(cmd.configuration))
+  } else {
+    try {
+      return JSON.parse(fs.readFileSync(`${cmd.service}-configuration.json`))
+    } catch (e) {
+      return createConfiguration.fromCSV(fieldNames, schema, cmd)
+    }
+  }
 }
 
 module.exports = {
