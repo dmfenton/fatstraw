@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * command `prepare` to prepare a definition and data source
 * Function to generate Geoevent definition from Socrata view
 * Function to generate slurp configuration from Socrata view
+* Slurp command can use a configuration file
 
 ### Changed
 * Reorganized into commands directory

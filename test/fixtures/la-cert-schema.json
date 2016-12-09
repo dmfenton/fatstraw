@@ -1,0 +1,449 @@
+{
+  "---geo_hash---": {
+    "type": "esri_geo_hash",
+    "hashes": [
+      {
+        "lods": 20,
+        "style": "square",
+        "sr": "102100"
+      },
+      {
+        "lods": 20,
+        "style": "flatTriangle",
+        "sr": "102100"
+      },
+      {
+        "lods": 20,
+        "style": "pointyTriangle",
+        "sr": "102100"
+      }
+    ]
+  },
+  "address_end": {
+    "type": "double"
+  },
+  "address_fraction_end": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "address_fraction_start": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "address_start": {
+    "type": "double"
+  },
+  "applicant_address_1": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "applicant_address_2": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "applicant_address_3": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "applicant_business_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "applicant_first_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "applicant_last_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "assessor_book": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "assessor_page": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "assessor_parcel": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "block": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "census_tract": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "cofo_issue_date": {
+    "type": "date",
+    "format": "strict_date_optional_time||epoch_millis"
+  },
+  "cofo_number": {
+    "type": "double"
+  },
+  "contractor_address": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "contractor_city": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "contractor_state": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "contractors_business_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "event_code": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "floor_area_l_a_building_code_definition": {
+    "type": "double"
+  },
+  "floor_area_l_a_zoning_code_definition": {
+    "type": "double"
+  },
+  "globalid": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "initiating_office": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "issue_date": {
+    "type": "date",
+    "format": "strict_date_optional_time||epoch_millis"
+  },
+  "latest_status": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "latitude_longitude": {
+    "type": "geo_point",
+    "lat_lon": true,
+    "geohash": true,
+    "geohash_prefix": true
+  },
+  "license": {
+    "type": "double"
+  },
+  "license_expiration_date": {
+    "type": "date",
+    "format": "strict_date_optional_time||epoch_millis"
+  },
+  "license_type": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "lot": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "objectid": {
+    "type": "long"
+  },
+  "occupancy": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "of_residential_dwelling_units": {
+    "type": "double"
+  },
+  "of_stories": {
+    "type": "double"
+  },
+  "pcis_permit": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "permit_category": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "permit_sub_type": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "permit_type": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "principal_first_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "principal_last_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "principal_middle_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "project_number": {
+    "type": "double"
+  },
+  "reference_old_permit": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "status_date": {
+    "type": "date",
+    "format": "strict_date_optional_time||epoch_millis"
+  },
+  "street_direction": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "street_name": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "street_suffix": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "suffix_direction": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "tract": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "unit_range_end": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "unit_range_start": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "valuation": {
+    "type": "double"
+  },
+  "work_description": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  },
+  "zip_code": {
+    "type": "double"
+  },
+  "zone": {
+    "type": "string",
+    "index": "not_analyzed",
+    "fields": {
+      "analyzed": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "geometry": "latitude_longitude",
+  "fields": [
+    {
+      "name": "cofo_number",
+      "transform": "double",
+      "alias": "CofO Number"
+    },
+    {
+      "name": "cofo_issue_date",
+      "transform": "date",
+      "alias": "CofO Issue Date                                                                                                                                                                                                                                                "
+    },
+    {
+      "name": "latest_status",
+      "transform": "string",
+      "alias": "Status"
+    },
+    {
+      "name": "status_date",
+      "transform": "date",
+      "alias": "Status Date"
+    },
+    {
+      "name": "assessor_book",
+      "transform": "string",
+      "alias": "Assessor Book"
+    },
+    {
+      "name": "assessor_page",
+      "transform": "string",
+      "alias": "Assessor Page"
+    },
+    {
+      "name": "assessor_parcel",
+      "transform": "string",
+      "alias": "Assessor Parcel"
+    },
+    {
+      "name": "tract",
+      "transform": "string",
+      "alias": "TRACT"
+    },
+    {
+      "name": "block",
+      "transform": "string",
+      "alias": "BLOCK"
+    },
+    {
+      "name": "lot",
+      "transform": "string",
+      "alias": "LOT"
+    },
+    {
+      "name": "reference_old_permit",
+      "transform": "string",
+      "alias": "Reference # (Old Permit #)"
+    },
+    {
+      "name": "pcis_permit",
+      "transform": "string",
+      "alias": "PCIS Permit #"
+    },
+    {
+      "name": "permit_type",
+      "transform": "string",
+      "alias": "Permit Type"
+    },
+    {
+      "name": "permit_sub_type",
+      "transform": "string",
+      "alias": "Permit Sub-Type"
+    },
+    {
+      "name": "permit_category",
+      "transform": "string",
+      "alias": "Permit Category"
+    },
+    {
+      "name": "project_number",
+      "transform": "double",
+      "alias": "Project Number"
+    },
+    {
+      "name": "event_code",
+      "transform": "string",
+      "alias": "Event Code"
+    },
+    {
+      "name": "initiating_office",
+      "transform": "string",
+      "alias": "Initiating Office"
+    },
+    {
+      "name": "issue_date",
+      "transform": "date",
+      "alias": "Issue Date"
+    },
+    {
+      "name": "address_start",
+      "transform": "double",
+      "alias": "Address Start"
+    },
+    {
+      "name": "address_fraction_start",
+      "transform": "string",
+      "alias": "Address Fraction Start"
+    },
+    {
+      "name": "address_end",
+      "transform": "double",
+      "alias": "Address End"
+    },
+    {
+      "name": "address_fraction_end",
+      "transform": "string",
+      "alias": "Address Fraction End"
+    },
+    {
+      "name": "street_direction",
+      "transform": "string",
+      "alias": "Street Direction"
+    },
+    {
+      "name": "street_name",
+      "transform": "string",
+      "alias": "Street Name"
+    },
+    {
+      "name": "street_suffix",
+      "transform": "string",
+      "alias": "Street Suffix"
+    },
+    {
+      "name": "suffix_direction",
+      "transform": "string",
+      "alias": "Suffix Direction"
+    },
+    {
+      "name": "unit_range_start",
+      "transform": "string",
+      "alias": "Unit Range Start"
+    },
+    {
+      "name": "unit_range_end",
+      "transform": "string",
+      "alias": "Unit Range End"
+    },
+    {
+      "name": "zip_code",
+      "transform": "double",
+      "alias": "Zip Code"
+    },
+    {
+      "name": "work_description",
+      "transform": "string",
+      "alias": "Work Description"
+    },
+    {
+      "name": "valuation",
+      "transform": "money",
+      "alias": "Valuation"
+    },
+    {
+      "name": "floor_area_l_a_zoning_code_definition",
+      "transform": "double",
+      "alias": "Floor Area-L.A. Zoning Code Definition"
+    },
+    {
+      "name": "of_residential_dwelling_units",
+      "transform": "double",
+      "alias": "# of Residential Dwelling Units"
+    },
+    {
+      "name": "of_stories",
+      "transform": "double",
+      "alias": "# of Stories"
+    },
+    {
+      "name": "contractors_business_name",
+      "transform": "string",
+      "alias": "Contractor's Business Name"
+    },
+    {
+      "name": "contractor_address",
+      "transform": "string",
+      "alias": "Contractor Address"
+    },
+    {
+      "name": "contractor_city",
+      "transform": "string",
+      "alias": "Contractor City"
+    },
+    {
+      "name": "contractor_state",
+      "transform": "string",
+      "alias": "Contractor State"
+    },
+    {
+      "name": "license_type",
+      "transform": "string",
+      "alias": "License Type"
+    },
+    {
+      "name": "license",
+      "transform": "double",
+      "alias": "License #"
+    },
+    {
+      "name": "principal_first_name",
+      "transform": "string",
+      "alias": "Principal First Name"
+    },
+    {
+      "name": "principal_middle_name",
+      "transform": "string",
+      "alias": "Principal Middle Name"
+    },
+    {
+      "name": "principal_last_name",
+      "transform": "string",
+      "alias": "Principal Last Name"
+    },
+    {
+      "name": "license_expiration_date",
+      "transform": "date",
+      "alias": "License Expiration Date"
+    },
+    {
+      "name": "applicant_first_name",
+      "transform": "string",
+      "alias": "Applicant First Name"
+    },
+    {
+      "name": "applicant_last_name",
+      "transform": "string",
+      "alias": "Applicant Last Name"
+    },
+    {
+      "name": "applicant_business_name",
+      "transform": "string",
+      "alias": "Applicant Business Name"
+    },
+    {
+      "name": "applicant_address_1",
+      "transform": "string",
+      "alias": "Applicant Address 1"
+    },
+    {
+      "name": "applicant_address_2",
+      "transform": "string",
+      "alias": "Applicant Address 2"
+    },
+    {
+      "name": "applicant_address_3",
+      "transform": "string",
+      "alias": "Applicant Address 3"
+    },
+    {
+      "name": "zone",
+      "transform": "string",
+      "alias": "ZONE"
+    },
+    {
+      "name": "occupancy",
+      "transform": "string",
+      "alias": "OCCUPANCY"
+    },
+    {
+      "name": "floor_area_l_a_building_code_definition",
+      "transform": "double",
+      "alias": "Floor Area-L.A. Building Code Definition"
+    },
+    {
+      "name": "census_tract",
+      "transform": "string",
+      "alias": "Census Tract"
+    },
+    {
+      "name": "latitude_longitude",
+      "transform": "socrataLocation",
+      "alias": "Latitude/Longitude"
+    }
+  ]
+}

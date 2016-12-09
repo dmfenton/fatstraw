@@ -4,7 +4,7 @@ const createDefinition = require('../lib/create-definition')
 test('Create a geoevent definition from a socrata view', t => {
   t.plan(1)
   const options = {
-    owner: 'dmfenton',
+    user: 'dmfenton',
     name: 'Chicago_Taxi_Trips',
     track_id: 'trip_id',
     time_start: 'trip_start_timestamp',

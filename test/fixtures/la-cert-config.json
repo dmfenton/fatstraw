@@ -1,0 +1,285 @@
+{
+  "geometry": "latitude_longitude",
+  "fields": [
+    {
+      "name": "cofo_number",
+      "transform": "double",
+      "alias": "cofo_number"
+    },
+    {
+      "name": "cofo_issue_date",
+      "transform": "date",
+      "alias": "cofo_issue_date"
+    },
+    {
+      "name": "latest_status",
+      "transform": "string",
+      "alias": "latest_status"
+    },
+    {
+      "name": "status_date",
+      "transform": "date",
+      "alias": "status_date"
+    },
+    {
+      "name": "assessor_book",
+      "transform": "string",
+      "alias": "assessor_book"
+    },
+    {
+      "name": "assessor_page",
+      "transform": "string",
+      "alias": "assessor_page"
+    },
+    {
+      "name": "assessor_parcel",
+      "transform": "string",
+      "alias": "assessor_parcel"
+    },
+    {
+      "name": "tract",
+      "transform": "string",
+      "alias": "tract"
+    },
+    {
+      "name": "block",
+      "transform": "string",
+      "alias": "block"
+    },
+    {
+      "name": "lot",
+      "transform": "string",
+      "alias": "lot"
+    },
+    {
+      "name": "reference_old_permit",
+      "transform": "string",
+      "alias": "reference_old_permit"
+    },
+    {
+      "name": "pcis_permit",
+      "transform": "string",
+      "alias": "pcis_permit"
+    },
+    {
+      "name": "permit_type",
+      "transform": "string",
+      "alias": "permit_type"
+    },
+    {
+      "name": "permit_sub_type",
+      "transform": "string",
+      "alias": "permit_sub_type"
+    },
+    {
+      "name": "permit_category",
+      "transform": "string",
+      "alias": "permit_category"
+    },
+    {
+      "name": "project_number",
+      "transform": "double",
+      "alias": "project_number"
+    },
+    {
+      "name": "event_code",
+      "transform": "string",
+      "alias": "event_code"
+    },
+    {
+      "name": "initiating_office",
+      "transform": "string",
+      "alias": "initiating_office"
+    },
+    {
+      "name": "issue_date",
+      "transform": "date",
+      "alias": "issue_date"
+    },
+    {
+      "name": "address_start",
+      "transform": "double",
+      "alias": "address_start"
+    },
+    {
+      "name": "address_fraction_start",
+      "transform": "string",
+      "alias": "address_fraction_start"
+    },
+    {
+      "name": "address_end",
+      "transform": "double",
+      "alias": "address_end"
+    },
+    {
+      "name": "address_fraction_end",
+      "transform": "string",
+      "alias": "address_fraction_end"
+    },
+    {
+      "name": "street_direction",
+      "transform": "string",
+      "alias": "street_direction"
+    },
+    {
+      "name": "street_name",
+      "transform": "string",
+      "alias": "street_name"
+    },
+    {
+      "name": "street_suffix",
+      "transform": "string",
+      "alias": "street_suffix"
+    },
+    {
+      "name": "suffix_direction",
+      "transform": "string",
+      "alias": "suffix_direction"
+    },
+    {
+      "name": "unit_range_start",
+      "transform": "string",
+      "alias": "unit_range_start"
+    },
+    {
+      "name": "unit_range_end",
+      "transform": "string",
+      "alias": "unit_range_end"
+    },
+    {
+      "name": "zip_code",
+      "transform": "double",
+      "alias": "zip_code"
+    },
+    {
+      "name": "work_description",
+      "transform": "string",
+      "alias": "work_description"
+    },
+    {
+      "name": "valuation",
+      "transform": "double",
+      "alias": "valuation"
+    },
+    {
+      "name": "floor_area_l_a_zoning_code_definition",
+      "transform": "double",
+      "alias": "floor_area_l_a_zoning_code_definition"
+    },
+    {
+      "name": "of_residential_dwelling_units",
+      "transform": "double",
+      "alias": "of_residential_dwelling_units"
+    },
+    {
+      "name": "of_stories",
+      "transform": "double",
+      "alias": "of_stories"
+    },
+    {
+      "name": "contractors_business_name",
+      "transform": "string",
+      "alias": "contractors_business_name"
+    },
+    {
+      "name": "contractor_address",
+      "transform": "string",
+      "alias": "contractor_address"
+    },
+    {
+      "name": "contractor_city",
+      "transform": "string",
+      "alias": "contractor_city"
+    },
+    {
+      "name": "contractor_state",
+      "transform": "string",
+      "alias": "contractor_state"
+    },
+    {
+      "name": "license_type",
+      "transform": "string",
+      "alias": "license_type"
+    },
+    {
+      "name": "license",
+      "transform": "double",
+      "alias": "license"
+    },
+    {
+      "name": "principal_first_name",
+      "transform": "string",
+      "alias": "principal_first_name"
+    },
+    {
+      "name": "principal_middle_name",
+      "transform": "string",
+      "alias": "principal_middle_name"
+    },
+    {
+      "name": "principal_last_name",
+      "transform": "string",
+      "alias": "principal_last_name"
+    },
+    {
+      "name": "license_expiration_date",
+      "transform": "date",
+      "alias": "license_expiration_date"
+    },
+    {
+      "name": "applicant_first_name",
+      "transform": "string",
+      "alias": "applicant_first_name"
+    },
+    {
+      "name": "applicant_last_name",
+      "transform": "string",
+      "alias": "applicant_last_name"
+    },
+    {
+      "name": "applicant_business_name",
+      "transform": "string",
+      "alias": "applicant_business_name"
+    },
+    {
+      "name": "applicant_address_1",
+      "transform": "string",
+      "alias": "applicant_address_1"
+    },
+    {
+      "name": "applicant_address_2",
+      "transform": "string",
+      "alias": "applicant_address_2"
+    },
+    {
+      "name": "applicant_address_3",
+      "transform": "string",
+      "alias": "applicant_address_3"
+    },
+    {
+      "name": "zone",
+      "transform": "string",
+      "alias": "zone"
+    },
+    {
+      "name": "occupancy",
+      "transform": "string",
+      "alias": "occupancy"
+    },
+    {
+      "name": "floor_area_l_a_building_code_definition",
+      "transform": "double",
+      "alias": "floor_area_l_a_building_code_definition"
+    },
+    {
+      "name": "census_tract",
+      "transform": "string",
+      "alias": "census_tract"
+    },
+    {
+      "name": "latitude_longitude",
+      "transform": "geo_point",
+      "alias": "latitude_longitude"
+    }
+  ]
+}
