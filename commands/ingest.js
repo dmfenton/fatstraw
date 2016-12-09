@@ -65,6 +65,7 @@ function handler (cmd) {
   let first = true
   let lastCompleted
   let failureCount = 0
+  let configuration = getConfig(cmd)
 
   client.indices.getMapping({index: service, type: service})
   .then((mappings) => {
@@ -84,10 +85,9 @@ function handler (cmd) {
     getFile(file)
     .split() // split the CSV by line
     .map((feature) => {
-      let configuration
       if (first) {
         fieldNames = feature.split(',').map(h => { return h.trim().replace(/\s+/g, '_') })
-        configuration = getConfig(fieldNames, schema, cmd)
+        if (!configuration) configuration = createConfiguration.fromCSV(fieldNames, schema, cmd)
       }
       first = false
       objectid++
@@ -133,14 +133,14 @@ function handler (cmd) {
   })
 }
 
-function getConfig (fieldNames, schema, cmd) {
+function getConfig (cmd) {
   if (cmd.configuration) {
     return JSON.parse(fs.readFileSync(cmd.configuration))
   } else {
     try {
       return JSON.parse(fs.readFileSync(`${cmd.service}-configuration.json`))
     } catch (e) {
-      return createConfiguration.fromCSV(fieldNames, schema, cmd)
+      return null
     }
   }
 }
