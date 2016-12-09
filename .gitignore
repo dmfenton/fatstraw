@@ -1,2 +1,3 @@
 node_modules
-slurp.error.log
+*-configuration.json
+*.log

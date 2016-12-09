@@ -3,9 +3,7 @@ const _ = require('highland')
 const fs = require('fs')
 const request = require('request').defaults({gzip: true})
 const Elasticsearch = require('elasticsearch')
-const transform = require('./lib/transform')
-
-
+const transform = require('../lib/transform')
 
 function getFile (file) {
   let stream
@@ -19,7 +17,35 @@ function skipper (drop) {
   else return _()
 }
 
-function ingest (cmd) {
+function builder (yargs) {
+  return yargs
+    .describe('f', 'The CSV to load into the BDS')
+    .alias('f', 'file')
+    .describe('h', 'user:pass@bds-url:9220')
+    .alias('h', 'host')
+    .describe('s', 'The name of the BDS service to be loaded')
+    .alias('s', 'service')
+    .describe('g', 'Field containing geometry data in BDS service')
+    .alias('g', 'geometry')
+    .describe('r', 'Max features per second to load')
+    .default('r', 1000)
+    .alias('r', 'rate')
+    .describe('b', 'Max features to load per request')
+    .default('b', 1000)
+    .alias('b', 'batch')
+    .describe('x', 'Field containing longitude data')
+    .alias('x', 'lon')
+    .describe('y', 'Field containing latitude data')
+    .alias('y', 'lat')
+    .describe('skip', 'How many rows to skip from the source')
+    .describe('dry-run', 'Show payload but do not send to ES')
+    .demand(['f', 'h', 's'])
+    .describe('sniff', 'Discover other members of the ES cluster')
+    .describe('id-start', 'Initial ObjectID')
+    .example('fatstraw slurp -h user:pass@bds:9220 -f data.csv -s parking_violations -g Shape -x X -y Y')
+}
+
+function handler (cmd) {
   const rate = cmd.rate
   const batch = cmd.batch
   const service = cmd.service
@@ -105,4 +131,9 @@ function ingest (cmd) {
   })
 }
 
-module.exports = ingest
+module.exports = {
+  command: 'slurp',
+  description: 'load data',
+  handler,
+  builder
+}

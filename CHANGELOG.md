@@ -4,7 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 ### Added
+* command `prepare` to prepare a definition and data source
 * Function to generate Geoevent definition from Socrata view
+* Function to generate slurp configuration from Socrata view
+
+### Changed
+* Reorganized into commands directory
 
 ### Fixed
 * ObjectIDs are properly assigned
