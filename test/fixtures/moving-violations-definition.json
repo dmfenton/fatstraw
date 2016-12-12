@@ -97,7 +97,7 @@
     },
     {
       "name": "TICKETISSUEDATE",
-      "type": "date",
+      "type": "Date",
       "tags": [
         "TIME_START"
       ],
@@ -129,7 +129,7 @@
     },
     {
       "name": "SE_ANNO_CAD_DATA",
-      "type": "Binary",
+      "type": "String",
       "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []

@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 * Ensure blank lines are skipped
 * Token and server can be specified
+* Only types which exist in GeoEvent are included in definitions
+* Correct capitalization in field type names
 
 ## [1.1.0] - 2016-12-09
 ### Added

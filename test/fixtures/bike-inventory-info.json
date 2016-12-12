@@ -2,67 +2,67 @@
   "fields": [
     {
       "name": "BikeInventory_ID",
-      "type": "integer"
+      "type": "Integer"
     },
     {
       "name": "RoadSegment_ID",
-      "type": "integer"
+      "type": "Integer"
     },
     {
       "name": "LocalName",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "AlternateTrailName",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "RegionalName",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "CurrentOwner",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "Steward",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "FacilityStatus",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "FacilityType",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "AltFacilityType",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "FacilityDetail",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "TrafficDirection",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "Surface",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "BSG",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "BSGkind",
-      "type": "string"
+      "type": "String"
     },
     {
       "name": "Shape_Length",
-      "type": "double"
+      "type": "Double"
     }
   ],
   "layer_name": "BikeInventory",
