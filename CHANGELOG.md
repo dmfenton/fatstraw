@@ -5,8 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 ### Added
 * Prepare command works with File GeoDatabases
+
 ### Fixed
 * Ensure blank lines are skipped
+* Token and server can be specified
 
 ## [1.1.0] - 2016-12-09
 ### Added

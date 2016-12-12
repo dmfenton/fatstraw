@@ -15,6 +15,11 @@ function builder (yargs) {
     .alias('u', 'user')
     .describe('p', 'GeoEvent Password')
     .alias('p', 'password')
+    .describe('l', 'Layer in GeoDatabase')
+    .alias('l', 'layer')
+    .describe('s', 'GeoEvent server')
+    .alias('s', 'server')
+    .demand(['dataset', 'server', 'token', 'user'])
 }
 
 function handler (cmd) {
@@ -24,7 +29,7 @@ function handler (cmd) {
   createDefinition[type](cmd)
   .then(result => {
     info = result.info
-    return putDefinition(result.definition)
+    return putDefinition(result.definition, cmd)
   }, handleRejection)
   .then(definition => { return dataSource(definition, cmd) }, handleRejection)
   .then(res => {
@@ -61,6 +66,7 @@ function dataSource (definition, cmd) {
 
 function handleRejection (rejection) {
   console.log(`status=fail error=${rejection}`)
+  console.trace(rejection)
   process.exit(1)
 }
 
