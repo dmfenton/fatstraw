@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Token and server can be specified
 * Only types which exist in GeoEvent are included in definitions
 * Correct capitalization in field type names
+* Correct schema errors in definition from GDB
 
 ## [1.1.0] - 2016-12-09
 ### Added

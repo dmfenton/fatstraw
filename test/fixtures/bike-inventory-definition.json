@@ -7,112 +7,96 @@
     {
       "name": "BikeInventory_ID",
       "type": "Integer",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "RoadSegment_ID",
       "type": "Integer",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "LocalName",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "AlternateTrailName",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "RegionalName",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "CurrentOwner",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "Steward",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "FacilityStatus",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "FacilityType",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "AltFacilityType",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "FacilityDetail",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "TrafficDirection",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "Surface",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "BSG",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "BSGkind",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "Shape_Length",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },

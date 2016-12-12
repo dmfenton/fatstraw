@@ -7,98 +7,85 @@
     {
       "name": "ROW_",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "LOCATION",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "ADDRESS_ID",
       "type": "Integer",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "STREETSEGID",
       "type": "Integer",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "XCOORD",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "YCOORD",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "TICKETTYPE",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "FINEAMT",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "TOTALPAID",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "PENALTY1",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "PENALTY2",
       "type": "Double",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "ACCIDENTINDICATOR",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "AGENCYID",
       "type": "Integer",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "TICKETISSUEDATE",
       "type": "Date",
-      "tags": [
+      "fieldDefinitionTag": [
         "TIME_START"
       ],
       "cardinality": "One",
@@ -107,21 +94,19 @@
     {
       "name": "VIOLATIONCODE",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "VIOLATIONDESC",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
     {
       "name": "ROW_ID",
       "type": "String",
-      "tags": [
+      "fieldDefinitionTag": [
         "TRACK_ID"
       ],
       "cardinality": "One",
@@ -130,7 +115,6 @@
     {
       "name": "SE_ANNO_CAD_DATA",
       "type": "String",
-      "tags": [],
       "cardinality": "One",
       "fieldDefinitions": []
     },
