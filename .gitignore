@@ -2,3 +2,5 @@ node_modules
 *-configuration.json
 *.log
 .vscode
+/*.gdb
+/*.gdb.zip
