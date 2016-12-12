@@ -31,7 +31,10 @@ function handler (cmd) {
     info = result.info
     return putDefinition(result.definition, cmd)
   }, handleRejection)
-  .then(definition => { return dataSource(definition, cmd) }, handleRejection)
+  .then(result => {
+    definition = result
+    return dataSource(definition, cmd)
+  }, handleRejection)
   .then(res => {
     if (res.results[0].status === 'error') throw new Error(res.results[0].messages[0])
     console.log(`status=success method=post object=datasource`)
