@@ -1,0 +1,129 @@
+{
+  "name": "BikeInventory",
+  "owner": "dmfenton",
+  "guid": "ff5b7d7b-5b29-463e-9e77-9cdc760e72f2",
+  "accessType": "editable",
+  "fieldDefinitions": [
+    {
+      "name": "BikeInventory_ID",
+      "type": "integer",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "RoadSegment_ID",
+      "type": "integer",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "LocalName",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "AlternateTrailName",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "RegionalName",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "CurrentOwner",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "Steward",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "FacilityStatus",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "FacilityType",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "AltFacilityType",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "FacilityDetail",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "TrafficDirection",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "Surface",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "BSG",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "BSGkind",
+      "type": "string",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "Shape_Length",
+      "type": "double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "Shape",
+      "type": "Geometry",
+      "cardinality": "One",
+      "fieldDefinitionTag": [
+        "GEOMETRY"
+      ],
+      "fieldDefinitions": []
+    }
+  ]
+}

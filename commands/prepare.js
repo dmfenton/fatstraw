@@ -4,10 +4,6 @@ const putDefinition = require('../lib/geoevent/put-definition')
 const publishDataSource = require('../lib/geoevent/publish-data-source')
 const createConfiguration = require('../lib/create-configuration')
 const fs = require('fs')
-const request = require('request-promise').defaults({
-  gzip: true,
-  json: true
-})
 
 function builder (yargs) {
   return yargs
@@ -22,42 +18,45 @@ function builder (yargs) {
 }
 
 function handler (cmd) {
-  let view
+  let info
   let definition
-  request(cmd.dataset)
-  .then(res => {
-    console.log(`status=success method=get object=view`)
-    if (res.statusCode >= 400) throw new Error(res.statusCode)
-    view = res
-    definition = createDefinition.fromSocrata(view, cmd)
-    return putDefinition(definition)
+  const type = detectType(cmd.dataset)
+  createDefinition[type](cmd)
+  .then(result => {
+    info = result.info
+    return putDefinition(result.definition)
   }, handleRejection)
-  .then(res => {
-    console.log(`status=success method=put object=definition`)
-    if (res.statusCode >= 400) throw new Error(res.statusCode)
-    const dsOptions = {
-      name: definition.name,
-      geometryType: 'point',
-      guid: definition.guid,
-      dataSourceLayerName: definition.name,
-      timeUnits: cmd.timeUnits,
-      timeInterval: cmd.timeInterval,
-      displayField: definition.fieldDefinitions[0].name
-    }
-    const dataSource = createDataSource(dsOptions)
-    console.log(JSON.stringify(dataSource, null, 2))
-    return publishDataSource(dataSource, cmd)
-  }, handleRejection)
+  .then(definition => { return dataSource(definition, cmd) }, handleRejection)
   .then(res => {
     if (res.results[0].status === 'error') throw new Error(res.results[0].messages[0])
     console.log(`status=success method=post object=datasource`)
     if (res.statusCode >= 400) throw new Error(res.statusCode)
-    const configuration = createConfiguration.fromSocrata(view)
+    const configuration = createConfiguration[type](info)
     const fileName = `${definition.name}-configuration.json`
     fs.writeFileSync(fileName, JSON.stringify(configuration))
     console.log(`status=success output=${fileName}`)
   }, handleRejection)
   .catch(handleRejection)
+}
+
+function detectType (dataset) {
+  if (/api\/view/.test(dataset)) return 'fromSocrata'
+  else if (/gdb/.test(dataset)) return 'fromGDB'
+  else if (/csv$/.test(dataset)) return 'fromCSV'
+}
+
+function dataSource (definition, cmd) {
+  const dsOptions = {
+    name: definition.name,
+    geometryType: 'point',
+    guid: definition.guid,
+    dataSourceLayerName: definition.name,
+    timeUnits: cmd.timeUnits,
+    timeInterval: cmd.timeInterval,
+    displayField: definition.fieldDefinitions[0].name
+  }
+  const dataSource = createDataSource(dsOptions)
+  return publishDataSource(dataSource, cmd)
 }
 
 function handleRejection (rejection) {

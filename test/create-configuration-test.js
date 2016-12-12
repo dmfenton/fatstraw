@@ -3,7 +3,7 @@ const createConfiguration = require('../lib/create-configuration')
 const fs = require('fs')
 
 test('Create a configuration from a Socrata View', t => {
-  const view = require('./fixtures/socrata-view.json')
+  const view = require('./fixtures/taxi-trips-view.json')
   const expected = require('./fixtures/taxis-configuration.js')
   const configuration = createConfiguration.fromSocrata(view)
   t.deepEqual(JSON.stringify(configuration), JSON.stringify(expected), 'configuration is correct')

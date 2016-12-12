@@ -1,0 +1,147 @@
+{
+  "name": "MovingViolations",
+  "owner": "dmfenton",
+  "guid": "ff5b7d7b-5b29-463e-9e77-9cdc760e72f2",
+  "accessType": "editable",
+  "fieldDefinitions": [
+    {
+      "name": "ROW_",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "LOCATION",
+      "type": "String",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "ADDRESS_ID",
+      "type": "Integer",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "STREETSEGID",
+      "type": "Integer",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "XCOORD",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "YCOORD",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "TICKETTYPE",
+      "type": "String",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "FINEAMT",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "TOTALPAID",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "PENALTY1",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "PENALTY2",
+      "type": "Double",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "ACCIDENTINDICATOR",
+      "type": "String",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "AGENCYID",
+      "type": "Integer",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "TICKETISSUEDATE",
+      "type": "date",
+      "tags": [
+        "TIME_START"
+      ],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "VIOLATIONCODE",
+      "type": "String",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "VIOLATIONDESC",
+      "type": "String",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "ROW_ID",
+      "type": "String",
+      "tags": [
+        "TRACK_ID"
+      ],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "SE_ANNO_CAD_DATA",
+      "type": "Binary",
+      "tags": [],
+      "cardinality": "One",
+      "fieldDefinitions": []
+    },
+    {
+      "name": "SHAPE",
+      "type": "Geometry",
+      "cardinality": "One",
+      "fieldDefinitionTag": [
+        "GEOMETRY"
+      ],
+      "fieldDefinitions": []
+    }
+  ]
+}

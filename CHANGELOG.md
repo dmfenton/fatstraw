@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+### Added
+* Prepare command works with File GeoDatabases
 ### Fixed
 * Ensure blank lines are skipped
 
