@@ -9,10 +9,10 @@
   "dependencies": {
     "csv-parse": "^1.1.7",
     "elasticsearch": "^12.1.0",
+    "feature-parser": "^1.0.1",
     "fgdb": "^1.0.0",
     "highland": "^2.10.1",
     "mz": "^2.6.0",
-    "ogr2ogr": "^1.0.0",
     "request": "^2.79.0",
     "request-promise": "^4.1.1",
     "uuid-random": "^1.0.5",

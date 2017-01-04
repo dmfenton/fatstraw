@@ -1,6 +1,7 @@
 'use strict'
 const _ = require('highland')
-const fromCSV = require('../lib/ingest/input/from-csv')
+const detectType = require('../lib/detectType')
+const input = require('../lib/ingest/input')
 const toBDS = require('../lib/ingest/output')
 
 function builder (yargs) {
@@ -35,7 +36,8 @@ function handler (options) {
   const rate = options.rate
   const batch = options.batch
   let start = options.start = Date.now()
-  fromCSV(options)
+  const type = detectType(options.file)
+  input[type](options)
   .pipe(skipper(options.skip)) // skip features from the start of the source
   .ratelimit(rate, 1) // limit the features per second
   .batch(batch) // limit the features per bulk upload
