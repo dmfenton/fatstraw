@@ -1,0 +1,116 @@
+{
+  "layers": [
+    {
+      "adminLayerInfo": {
+        "geometryField": {
+          "name": "Shape",
+          "srid": 4326
+        }
+      },
+      "name": "foobarandalittlebaz",
+      "type": "Feature Layer",
+      "displayField": "",
+      "description": "",
+      "copyrightText": "",
+      "defaultVisibility": true,
+      "relationships": [],
+      "isDataVersioned": false,
+      "supportsRollbackOnFailureParameter": true,
+      "supportsAdvancedQueries": true,
+      "geometryType": "esriGeometryPoint",
+      "minScale": 0,
+      "maxScale": 0,
+      "extent": {
+        "type": "extent",
+        "xmin": -8591193.021457763,
+        "ymin": 4686637.938322772,
+        "xmax": -8560023.564035669,
+        "ymax": 4726686.262985171,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      },
+      "drawingInfo": {
+        "transparency": 0,
+        "labelingInfo": null,
+        "renderer": {
+          "type": "simple",
+          "symbol": {
+            "color": [
+              20,
+              158,
+              206,
+              130
+            ],
+            "size": 18,
+            "angle": 0,
+            "xoffset": 0,
+            "yoffset": 0,
+            "type": "esriSMS",
+            "style": "esriSMSCircle",
+            "outline": {
+              "color": [
+                255,
+                255,
+                255,
+                220
+              ],
+              "width": 2.25,
+              "type": "esriSLS",
+              "style": "esriSLSSolid"
+            }
+          }
+        }
+      },
+      "allowGeometryUpdates": true,
+      "hasAttachments": true,
+      "htmlPopupType": "esriServerHTMLPopupTypeNone",
+      "hasM": false,
+      "hasZ": false,
+      "objectIdField": "OBJECTID",
+      "globalIdField": "",
+      "typeIdField": "",
+      "fields": [
+        {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID",
+          "sqlType": "sqlTypeOther",
+          "nullable": false,
+          "editable": false,
+          "domain": null,
+          "defaultValue": null
+        },
+        {
+          "name": "meow",
+          "type": "esriFieldTypeString",
+          "alias": "meow",
+          "nullable": true,
+          "editable": true,
+          "domain": null,
+          "defaultValue": null,
+          "sqlType": "sqlTypeNVarchar",
+          "length": 256
+        }
+      ],
+      "indexes": [],
+      "types": [],
+      "templates": [
+        {
+          "name": "New Feature",
+          "description": "",
+          "drawingTool": "esriFeatureEditToolPoint",
+          "prototype": {
+            "attributes": {
+              "meow": null
+            }
+          }
+        }
+      ],
+      "supportedQueryFormats": "JSON",
+      "hasStaticData": false,
+      "maxRecordCount": 10000,
+      "capabilities": "Query,Editing,Create,Update,Delete"
+    }
+  ]
+}
