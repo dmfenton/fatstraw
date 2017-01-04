@@ -3,6 +3,7 @@ const createDataSource = require('../lib/create-data-source')
 const putDefinition = require('../lib/geoevent/put-definition')
 const publishDataSource = require('../lib/geoevent/publish-data-source')
 const createConfiguration = require('../lib/create-configuration')
+const detectType = require('../lib/detect-type')
 const fs = require('fs')
 
 function builder (yargs) {
@@ -22,18 +23,18 @@ function builder (yargs) {
     .demand(['dataset', 'server', 'token', 'user'])
 }
 
-function handler (cmd) {
+function handler (options) {
   let info
   let definition
-  const type = detectType(cmd.dataset)
-  createDefinition[type](cmd)
+  const type = detectType(options.dataset)
+  createDefinition[type](options)
   .then(result => {
     info = result.info
-    return putDefinition(result.definition, cmd)
+    return putDefinition(result.definition, options)
   }, handleRejection)
   .then(result => {
     definition = result
-    return dataSource(definition, cmd)
+    return dataSource(definition, options)
   }, handleRejection)
   .then(res => {
     if (res.results[0].status === 'error') throw new Error(res.results[0].messages[0])
@@ -47,24 +48,18 @@ function handler (cmd) {
   .catch(handleRejection)
 }
 
-function detectType (dataset) {
-  if (/api\/view/.test(dataset)) return 'fromSocrata'
-  else if (/gdb/.test(dataset)) return 'fromGDB'
-  else if (/csv$/.test(dataset)) return 'fromCSV'
-}
-
-function dataSource (definition, cmd) {
+function dataSource (definition, options) {
   const dsOptions = {
     name: definition.name,
     geometryType: 'point',
     guid: definition.guid,
     dataSourceLayerName: definition.name,
-    timeUnits: cmd.timeUnits,
-    timeInterval: cmd.timeInterval,
+    timeUnits: options.timeUnits,
+    timeInterval: options.timeInterval,
     displayField: definition.fieldDefinitions[0].name
   }
   const dataSource = createDataSource(dsOptions)
-  return publishDataSource(dataSource, cmd)
+  return publishDataSource(dataSource, options)
 }
 
 function handleRejection (rejection) {
