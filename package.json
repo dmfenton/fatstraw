@@ -1,6 +1,6 @@
 {
   "name": "fatstraw",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "CLI for ingesting data into the ArcGIS Big Data Store",
   "main": "index.js",
   "bin": {
