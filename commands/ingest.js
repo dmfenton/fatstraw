@@ -35,8 +35,8 @@ function builder (yargs) {
 }
 
 function handler (options, callback) {
-  const client = new Elasticsearch.Client({host: options.host, apiVersion: '2.3', sniffOnStart: options['sniff']})
   return new Promise((resolve, reject) => {
+    const client = new Elasticsearch.Client({host: options.host, apiVersion: '2.3', sniffOnStart: options['sniff']})
     const rate = options.rate
     const batch = options.batch
     const service = options.service
