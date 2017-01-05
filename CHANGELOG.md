@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## Unreleased
+## [1.3.0] - 2017-01-05
 ### Added
 * Ingest command works with File Geodatabases
 
@@ -35,6 +35,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.0.0] - 2016-12-07
 * Initial Release
 
+[1.3.0]: https://github.com/dfemton/fatstraw/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/dfemton/fatstraw/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/dmfenton/fatstraw/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/dmfenton/fatstraw/releases/tag/v1.0.0
