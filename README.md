@@ -56,6 +56,7 @@ Options:
   -y, --lat       Field containing latitude data
   --skip          How many rows to skip from the source
   --dry-run       Show payload but do not send to ES
+  --delimiter     Character used to delimit CSV fields
   --sniff         Discover other members of the ES cluster
   --id-start      Initial ObjectID
 
