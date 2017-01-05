@@ -28,6 +28,7 @@ function builder (yargs) {
     .alias('y', 'lat')
     .describe('skip', 'How many rows to skip from the source')
     .describe('dry-run', 'Show payload but do not send to ES')
+    .describe('delimiter', 'Character used to delimit CSV fields')
     .demand(['f', 'h', 's'])
     .describe('sniff', 'Discover other members of the ES cluster')
     .describe('id-start', 'Initial ObjectID')

@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+### Added
+* Field delimiter option for CSVs in Ingest command
+
 ## [1.3.0] - 2017-01-05
 ### Added
 * Ingest command works with File Geodatabases
